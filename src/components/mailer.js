@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons"
 
-import { db } from "../../public/services/firebase"
+import { db } from "../components/firebase"
 
 class Mailer extends React.Component {
   notifyB = message =>
