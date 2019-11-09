@@ -12,6 +12,7 @@ import Albert from "../images/Albert.png"
 import Kim from "../images/Kim.png"
 import Justine from "../images/Justine.png"
 import Lester from "../images/Lester.png"
+import pixelHeart from "../images/pixelHeart.png"
 
 import facebook from "../images/facebook-logo.png"
 import twitter from "../images/twitter-social-logotype.png"
@@ -20,6 +21,7 @@ import phone from "../images/smartphone.png"
 
 import ScrollAnimation from "react-animate-on-scroll"
 import "animate.css/animate.min.css"
+import OurProjects from "../components/projects"
 
 class IndexPage extends React.Component {
   notify = () => toast("Wow so easy !")
@@ -62,6 +64,10 @@ class IndexPage extends React.Component {
         flexDirection: "row",
         minWidth: 250,
       },
+      thePixelHeart: {
+        width: 100,
+        height: 100,
+      },
     }
     return (
       <div>
@@ -90,7 +96,12 @@ class IndexPage extends React.Component {
                 technologies and IT knowledge one pixel at a time.
               </p>
             </div>
-            <h2 style={styles.teamTextHeader}>The Team:</h2>
+            <div>
+              <h2 style={styles.teamTextHeader}>Our projects:</h2>
+              <OurProjects />
+            </div>
+            <br />
+            <h2 style={styles.teamTextHeader}>The team:</h2>
           </div>
         </Layout>
         <ScrollAnimation

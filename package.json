@@ -29,7 +29,10 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "react-toastify": "^5.4.0"
+    "react-slick": "^0.25.2",
+    "react-sticky": "^6.0.3",
+    "react-toastify": "^5.4.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
