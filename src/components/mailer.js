@@ -46,13 +46,7 @@ class Mailer extends React.Component {
           <h4 style={messageStyle}> Your message was sent!</h4>
         </div>
       )
-      fetch("http://api.ipify.org/?format=json")
-        .then(results => results.json())
-        .then(data => {
-          if (data !== undefined) {
-            this.clearTextInputs(data.ip)
-          }
-        })
+      this.clearTextInputs("PixelHeartProduction")
     } else {
       this.notifyB(
         <div style={successStyle}>
