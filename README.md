@@ -7,4 +7,8 @@ how to collab:
 
 2: Open the project folder on Sublime or Visual Code Studio
 
-3: Collaborate!
+3: Open command line and type "cd C:/(your file directory)"
+
+4: Install dependencies by typing "npm i" in your command line
+ 
+5: Collaborate!
