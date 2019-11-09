@@ -1,25 +1,11 @@
 import React from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import firebase from "firebase"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons"
 
-var firebaseConfig = {
-  apiKey: "AIzaSyA3wHtlQll7NBIrwJzw7yivcKdezUbe90g",
-  authDomain: "pixel-heart-production-mails.firebaseapp.com",
-  databaseURL: "https://pixel-heart-production-mails.firebaseio.com",
-  projectId: "pixel-heart-production-mails",
-  storageBucket: "pixel-heart-production-mails.appspot.com",
-  messagingSenderId: "815179189670",
-  appId: "1:815179189670:web:4bf32f435e221a5087d367",
-  measurementId: "G-8HRC3N4N2Z",
-}
-// Initialize Firebases
-firebase.initializeApp(firebaseConfig)
-firebase.analytics()
-const db = firebase.firestore()
+import { db } from "../../public/services/firebase"
 
 class Mailer extends React.Component {
   notifyB = message =>
@@ -38,7 +24,6 @@ class Mailer extends React.Component {
     }
   }
   componentDidMount() {
-    console.log(db)
     const today = new Date()
     let date =
       today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate()
