@@ -1,5 +1,5 @@
-import firebase from "firebase"
-var firebaseConfig = {
+const firebase = require("firebase")
+const firebaseConfig = {
   apiKey: "AIzaSyA3wHtlQll7NBIrwJzw7yivcKdezUbe90g",
   authDomain: "pixel-heart-production-mails.firebaseapp.com",
   databaseURL: "https://pixel-heart-production-mails.firebaseio.com",
