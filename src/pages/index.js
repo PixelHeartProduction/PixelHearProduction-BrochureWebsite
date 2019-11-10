@@ -12,7 +12,6 @@ import Albert from "../images/Albert.png"
 import Kim from "../images/Kim.png"
 import Justine from "../images/Justine.png"
 import Lester from "../images/Lester.png"
-import pixelHeart from "../images/pixelHeart.png"
 
 import facebook from "../images/facebook-logo.png"
 import twitter from "../images/twitter-social-logotype.png"
@@ -72,7 +71,7 @@ class IndexPage extends React.Component {
     return (
       <div>
         <Layout>
-          <SEO title="Home" />
+          <SEO title="Pixel Heart Production" />
           <div>
             <img src={wallpaper} />
             <div style={styles.headerTextStyle}>
