@@ -1,6 +1,9 @@
 # PixelHearProduction-BrochureWebsite
 The official Pixel Heart Production brochure brought to you by Pixel Heart Prodution itself.
 
+NOTE
+-Before starting download the "Github Desktop"
+
 how to collab:
 
 1: Clone the repository (https://github.com/PixelHeartProduction/PixelHearProduction-BrochureWebsite.git)
