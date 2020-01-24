@@ -3,6 +3,7 @@ The official Pixel Heart Production brochure brought to you by Pixel Heart Produ
 
 NOTE
 -Before starting download the "Github Desktop"
+-Install "React" and "NodeJS" and "Gatsby"
 
 how to collab:
 
