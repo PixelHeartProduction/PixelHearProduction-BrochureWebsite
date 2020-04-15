@@ -2,18 +2,30 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { Link } from "gatsby"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExclamation } from "@fortawesome/free-solid-svg-icons"
 
 import juan from "../images/1c1l-box.png"
 import mithos from "../images/mithos-box.png"
 import uncovered from "../images/uncovered-box.png"
 import soon from "../images/questionmark.png"
 
+import winlogo from "../images/windowsicon.png"
+import andlogo from "../images/androidIcon.png"
+
+import JCOL from "../images/JuanCHoiceLogo.png"
+
 class projects extends React.Component {
+  componentDidMount() {}
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 800,
       slidesToShow: 1,
       slidesToScroll: 1,
     }
@@ -24,8 +36,10 @@ class projects extends React.Component {
          It will also dabble in mind-boggling mystery and will need the creativity of its players to finish the game.
           Decisions in the game will most likely alter the ending depending on how impactful the choice is.`,
       juan: `
-      A visual novel where your choice really matters. Join Juan's adventure
-      of daily choices from childhood to adulthood. Learn how your small
+      A simulation game that will present the different ways each scenario
+      could end up based on the user’s decisions will be a great help in teaching
+      them how to prevent the worst possible outcome. Join Juan's adventure
+      of daily choices of his life. Learn how your small
       choices affects your daily life and how it will cause an impact to your future.
       `,
       uncovered: `
@@ -50,6 +64,23 @@ class projects extends React.Component {
         maxWidth: 600,
         marginLeft: 10,
       },
+      deviceLogoStyle: {
+        width: 50,
+        height: 50,
+      },
+      gamePublicNotice: {
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+      },
+      publicNoticeText: {
+        marginTop: 13,
+      },
+      availableLogo: {
+        width: 200,
+        minWidth: 200,
+        height: 100,
+      },
     }
     return (
       <div styles={{ display: "flex" }}>
@@ -58,7 +89,12 @@ class projects extends React.Component {
             <div style={styles.projectBox}>
               <img src={juan} style={styles.boxPicture} />
               <div style={styles.textArea}>
-                <h3 style={styles.gameTitle}>Juan Choice Juan Life</h3>
+                <h3 style={styles.gameTitle}>Juan Choice One Life</h3>{" "}
+                <div style={styles.gamePublicNotice}>
+                  <h4 style={styles.publicNoticeText}>For Public Testing:</h4>
+                  <img src={winlogo} style={styles.deviceLogoStyle} />
+                  <img src={andlogo} style={styles.deviceLogoStyle} />
+                </div>
                 <p>{gameData.juan}</p>
               </div>
             </div>
@@ -91,6 +127,7 @@ class projects extends React.Component {
             </div>
           </div>
         </Slider>
+        <br />
       </div>
     )
   }

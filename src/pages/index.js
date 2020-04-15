@@ -2,6 +2,7 @@ import React from "react"
 import "animate.css/animate.min.css"
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,6 +22,12 @@ import phone from "../images/smartphone.png"
 import ScrollAnimation from "react-animate-on-scroll"
 import "animate.css/animate.min.css"
 import OurProjects from "../components/projects"
+import heartIcon from "../images/Lester.png"
+
+import winlogo from "../images/windowsicon.png"
+import andlogo from "../images/androidIcon.png"
+
+import JCOL from "../images/JuanCHoiceLogo.png"
 
 class IndexPage extends React.Component {
   notify = () => toast("Wow so easy !")
@@ -67,6 +74,23 @@ class IndexPage extends React.Component {
         width: 100,
         height: 100,
       },
+      deviceLogoStyle: {
+        width: 50,
+        height: 50,
+      },
+      gamePublicNotice: {
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+      },
+      publicNoticeText: {
+        marginTop: 13,
+      },
+      availableLogo: {
+        width: 200,
+        minWidth: 200,
+        height: 100,
+      },
     }
     return (
       <div>
@@ -98,6 +122,50 @@ class IndexPage extends React.Component {
             <div>
               <h2 style={styles.teamTextHeader}>Our projects:</h2>
               <OurProjects />
+            </div>
+            <div>
+              <h2 style={styles.teamTextHeader}>Downloads:</h2>
+              <div>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flex: 1,
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      width: 200,
+                    }}
+                  >
+                    <img style={styles.availableLogo} src={JCOL}></img>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      marginLeft: 100,
+                      flexDirection: "column",
+                    }}
+                  >
+                    <div style={styles.gamePublicNotice}>
+                      <h4 style={styles.publicNoticeText}>
+                        For Public Testing:
+                      </h4>
+                      <img src={winlogo} style={styles.deviceLogoStyle} />
+                      <img src={andlogo} style={styles.deviceLogoStyle} />
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flex: 1,
+                      }}
+                    >
+                      <Link to="/JuanChoiceOneLife">
+                        <button>Download</button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <br />
             <h2 style={styles.teamTextHeader}>The team:</h2>
