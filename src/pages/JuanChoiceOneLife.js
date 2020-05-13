@@ -55,8 +55,8 @@ const gameData = {
   them how to prevent the worst possible outcome. Join Juan's adventure
   of daily choices of his life. Learn how your small
   choices affects your daily life and how it will cause an impact to your future.`,
-  version: "Pre-alpha 5.0",
-  date: "Apr 14, 2020",
+  version: "Pre-alpha 8.2.5",
+  date: "May 13, 2020",
   devices: "Windows 7+, Android 5.0+",
   genre: "Visual Novel, Disaster",
 }
@@ -151,12 +151,12 @@ const JuanChoiceOneLife = () => (
       <br />
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div>
-          <a href="https://drive.google.com/open?id=1YfkK8qwIa6G77Zfn0RW2FPGu_Uq6QFt_">
+          <a href="https://drive.google.com/open?id=10OyFx5gCAOwhv2VBBJQ9R3jiyQmIvpGd">
             <img style={styles.downloadButtons} src={btnand}></img>
           </a>
         </div>
         <div>
-          <a href="https://drive.google.com/open?id=1Z8vkOqLr8IpHZyUyWYDXpArL7rS_xtxS">
+          <a href="https://drive.google.com/open?id=1ciXcmPpHHZBTnaYwO7jQagEGnbK9lxPK">
             <img style={styles.downloadButtons1} src={btnwin}></img>
           </a>
         </div>
