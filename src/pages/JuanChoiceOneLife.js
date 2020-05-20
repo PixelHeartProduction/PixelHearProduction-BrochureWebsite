@@ -55,8 +55,10 @@ const gameData = {
   them how to prevent the worst possible outcome. Join Juan's adventure
   of daily choices of his life. Learn how your small
   choices affects your daily life and how it will cause an impact to your future.`,
+
   version: "Pre-alpha 8.4.6",
   date: "May 20, 2020",
+
   devices: "Windows 7+, Android 5.0+",
   genre: "Visual Novel, Disaster",
 }
