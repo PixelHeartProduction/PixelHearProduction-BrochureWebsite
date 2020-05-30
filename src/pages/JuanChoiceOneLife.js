@@ -56,8 +56,8 @@ const gameData = {
   of daily choices of his life. Learn how your small
   choices affects your daily life and how it will cause an impact to your future.`,
 
-  version: "Pre-alpha 8.4.6",
-  date: "May 20, 2020",
+  version: "Beta 1.0",
+  date: "May 30, 2020",
 
   devices: "Windows 7+, Android 5.0+",
   genre: "Visual Novel, Disaster",
@@ -153,19 +153,16 @@ const JuanChoiceOneLife = () => (
       <br />
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div>
-          <a href="https://drive.google.com/open?id=1hSa563XI_6EGEC7qmPTt2CVW8aAKAHnc">
+          <a href="https://drive.google.com/open?id=1smED5V1cVofpJXkO_jtUWHo1tmYeW2w2">
             <img style={styles.downloadButtons} src={btnand}></img>
           </a>
         </div>
         <div>
-          <a href="https://drive.google.com/open?id=1FIAv8uCjlgABcnWUkQHkcB09jfV1jCmu">
+          <a href="https://drive.google.com/open?id=1PLFtiPlOqEDGLQPcS39DuwIbhRv1vvbG">
             <img style={styles.downloadButtons1} src={btnwin}></img>
           </a>
         </div>
       </div>
-      <p style={{ color: "red" }}>
-        *NOTE This game is still under delopment bugs are a common issues..
-      </p>
       <p>{gameData.desc}</p>
       <h4>How to install:</h4>
       <h5>Installation for Windows:</h5>
