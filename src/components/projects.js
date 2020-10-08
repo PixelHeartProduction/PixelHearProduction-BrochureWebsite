@@ -2,12 +2,6 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import { Link } from "gatsby"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExclamation } from "@fortawesome/free-solid-svg-icons"
 
 import juan from "../images/1c1l-box.png"
 import mithos from "../images/mithos-box.png"
@@ -16,8 +10,6 @@ import soon from "../images/questionmark.png"
 
 import winlogo from "../images/windowsicon.png"
 import andlogo from "../images/androidIcon.png"
-
-import JCOL from "../images/JuanCHoiceLogo.png"
 
 class projects extends React.Component {
   componentDidMount() {}
@@ -87,13 +79,13 @@ class projects extends React.Component {
         <Slider {...settings} autoplay fade arrows={true}>
           <div>
             <div style={styles.projectBox}>
-              <img src={juan} style={styles.boxPicture} />
+              <img src={juan} alt="" style={styles.boxPicture} />
               <div style={styles.textArea}>
                 <h3 style={styles.gameTitle}>Juan Choice One Life</h3>{" "}
                 <div style={styles.gamePublicNotice}>
                   <h4 style={styles.publicNoticeText}>For Public Testing:</h4>
-                  <img src={winlogo} style={styles.deviceLogoStyle} />
-                  <img src={andlogo} style={styles.deviceLogoStyle} />
+                  <img src={winlogo} alt="" style={styles.deviceLogoStyle} />
+                  <img src={andlogo} alt="" style={styles.deviceLogoStyle} />
                 </div>
                 <p>{gameData.juan}</p>
               </div>
@@ -101,7 +93,7 @@ class projects extends React.Component {
           </div>
           <div>
             <div style={styles.projectBox}>
-              <img src={mithos} style={styles.boxPicture} />
+              <img src={mithos} alt="" style={styles.boxPicture} />
               <div style={styles.textArea}>
                 <h3 style={styles.gameTitle}>Mithos</h3>
                 <p>{gameData.mithos}</p>
@@ -110,7 +102,7 @@ class projects extends React.Component {
           </div>
           <div>
             <div style={styles.projectBox}>
-              <img src={uncovered} style={styles.boxPicture} />
+              <img src={uncovered} alt="" style={styles.boxPicture} />
               <div style={styles.textArea}>
                 <h3 style={styles.gameTitle}>{`Uncover(ed)`}</h3>
                 <p>{gameData.uncovered}</p>
@@ -119,9 +111,8 @@ class projects extends React.Component {
           </div>
           <div>
             <div style={styles.projectBox}>
-              <img src={soon} style={styles.boxPicture} />
+              <img src={soon} alt="" style={styles.boxPicture} />
               <div style={styles.textArea}>
-                <h3 style={styles.gameTitle}></h3>
                 <p>{gameData.soon}</p>
               </div>
             </div>
