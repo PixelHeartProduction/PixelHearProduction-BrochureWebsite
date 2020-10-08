@@ -30,7 +30,7 @@ const JuanChoiceOneLife = () => (
 		<div style={{ flexDirection: "column", display: "flex" }}>
 			<br />
 			<div style={{ display: "flex" }}>
-				<h2 className="textHeader">Juan Choice One Life</h2>
+				<h2 className="textHeader2">Juan Choice One Life</h2>
 				<Link to="/">
 					<img style={{ width: 40, height: 40 }} alt="" src={icons.heartIcon} />
 				</Link>

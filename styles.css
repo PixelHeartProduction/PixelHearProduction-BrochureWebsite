@@ -94,6 +94,10 @@
 	flex: 1;
 	color: black;
 }
+.textHeader2 {
+	flex: 1;
+	color: orange;
+}
 .gameBox {
 	display: flex;
 	flex-direction: row;
