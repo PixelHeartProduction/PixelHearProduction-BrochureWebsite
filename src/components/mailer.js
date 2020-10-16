@@ -4,8 +4,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
+import Moment from "moment";
+import axios from "axios";
 
-class Mailer extends React.Component {
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "https://brochure-api-service.herokuapp.com/api/v1/message/send";
+let axiosConfig = {
+	headers: {
+		"Content-Type": "application/json",
+		"Access-Control-Allow-Origin": "*",
+	},
+};
+
+class Mailer extends React.PureComponent {
 	notifyB = message =>
 		toast(message, {
 			containerId: "B",
@@ -16,14 +27,7 @@ class Mailer extends React.Component {
 		email: "",
 		title: "",
 		message: "",
-		date: "",
-		isDisabled: false,
 	};
-	componentDidMount() {
-		const today = new Date();
-		let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-		this.setState({ date: date });
-	}
 	handleSubmit = () => {
 		const { name, email, message, title } = this.state;
 		const successStyle = {
@@ -41,7 +45,20 @@ class Mailer extends React.Component {
 					<h4 style={messageStyle}> Your message was sent!</h4>
 				</div>
 			);
-			this.clearTextInputs("PixelHeartProduction");
+			const body = {
+				name: this.state.name,
+				email: this.state.email,
+				title: this.state.title,
+				message: this.state.message,
+				date: Moment()
+					.format("YYYY-M-D")
+					.toString(),
+			};
+			axios
+				.post(proxyurl + url, body, axiosConfig)
+				.then(res => console.log(res))
+				.catch(err => console.log("Login: ", err));
+			this.clearFields();
 		} else {
 			this.notifyB(
 				<div style={successStyle}>
@@ -53,6 +70,9 @@ class Mailer extends React.Component {
 	};
 	handleInputChange = event => {
 		this.setState({ [event.target.name]: event.target.value });
+	};
+	clearFields = () => {
+		this.setState({ name: "", email: "", title: "", message: "" });
 	};
 	render() {
 		return (
@@ -69,6 +89,7 @@ class Mailer extends React.Component {
 						<div className="sd3f3">
 							<p className="text">Name:</p>
 							<input
+								value={this.state.name}
 								className="textInput"
 								type="text"
 								placeholder="Name"
@@ -79,6 +100,7 @@ class Mailer extends React.Component {
 						<div className="sd3f3r">
 							<p className="text">Email:</p>
 							<input
+								value={this.state.email}
 								className="textInput"
 								type="text"
 								placeholder="Email"
@@ -91,6 +113,7 @@ class Mailer extends React.Component {
 					<div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
 						<p className="text">Title:</p>
 						<input
+							value={this.state.title}
 							className="textInput"
 							type="text"
 							placeholder="Title"
@@ -101,6 +124,7 @@ class Mailer extends React.Component {
 					<div>
 						<p className="text">Message:</p>
 						<textarea
+							value={this.state.message}
 							height={220}
 							className="textInputLong"
 							placeholder="Message"
@@ -111,7 +135,6 @@ class Mailer extends React.Component {
 					<input
 						className="button"
 						type="button"
-						disabled={this.state.isDisabled}
 						value="Send"
 						onClick={() => {
 							this.handleSubmit();
