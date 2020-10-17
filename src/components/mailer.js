@@ -54,10 +54,7 @@ class Mailer extends React.PureComponent {
 					.format("YYYY-M-D")
 					.toString(),
 			};
-			axios
-				.post(proxyurl + url, body, axiosConfig)
-				.then(res => console.log(res))
-				.catch(err => console.log("Login: ", err));
+			axios.post(proxyurl + url, body, axiosConfig);
 			this.clearFields();
 		} else {
 			this.notifyB(

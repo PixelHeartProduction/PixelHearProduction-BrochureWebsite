@@ -14,8 +14,35 @@ import Mailer from "../components/mailer";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import OurProjects from "../components/projects";
+import Axios from "axios";
+import Moment from "moment";
 
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "https://brochure-api-service.herokuapp.com/api/v1/visitor/visit";
+let axiosConfig = {
+	headers: {
+		"Content-Type": "application/json",
+		"Access-Control-Allow-Origin": "*",
+	},
+};
 class IndexPage extends React.Component {
+	componentDidMount() {
+		if (localStorage.getItem("visitor_id") === null) {
+			this.visitorAPI();
+		}
+	}
+	visitorAPI = () => {
+		const body = {
+			dateTime: Moment()
+				.format("YYYY-M-D HH:mm")
+				.toString(),
+		};
+		Axios.post(proxyurl + url, body, axiosConfig).then(res => this.storeData(res.data));
+	};
+	storeData = data => {
+		localStorage.setItem("visitor_id", data.id);
+		localStorage.setItem("date", data.dateTime);
+	};
 	notify = () => toast("Wow so easy !");
 	render() {
 		const { avatar, icons } = CONSTANTS;
