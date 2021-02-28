@@ -111,6 +111,18 @@
 	flex-direction: column;
 	display: flex;
 }
+.availableLogo2 {
+	width: 150px;
+	margin-left: 5px;
+	flex-direction: column;
+	display: flex;
+}
+.availableLogo3 {
+	width: 230px;
+	margin-left: 5px;
+	flex-direction: column;
+	display: flex;
+}
 .downloadButtons1 {
 	width: 200px;
 	height: 70px;

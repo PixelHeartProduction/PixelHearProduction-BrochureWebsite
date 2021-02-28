@@ -55,22 +55,30 @@ class IndexPage extends React.Component {
 						<div className="headerTextStyle">
 							<hr />
 							<h1 className="textHeader">
-								Changing the world one <span className="pixelText">Pixel</span> at a
-								time.
+								Changing the world one{" "}
+								<span className="pixelText">Pixel</span> at
+								a time.
 							</h1>
 							<hr />
 						</div>
 						<div>
 							<p>
 								Hi!, we are the
-								<span className="pixelText"> Pixel Heart Production</span> a small
-								dev team from Bulacan State University. As you might have expected
-								we really love video games and creating them is not an exception. We
-								specialize in 2D games and building assets (Graphics, Animations,
-								Audio, Scripts/Programs) we also do our own research and screen
-								writing and documenting it. To this end, we're doing out best to
-								revolutionize 2D gaming with modern technologies and IT knowledge
-								one pixel at a time.
+								<span className="pixelText">
+									{" "}
+									Pixel Heart Production
+								</span>{" "}
+								a small dev team from Bulacan State
+								University. As you might have expected we
+								really love video games and creating them is
+								not an exception. We specialize in 2D games
+								and building assets (Graphics, Animations,
+								Audio, Scripts/Programs) we also do our own
+								research and screen writing and documenting
+								it. To this end, we're doing out best to
+								revolutionize 2D gaming with modern
+								technologies and IT knowledge one pixel at a
+								time.
 							</p>
 						</div>
 						<div>
@@ -88,26 +96,67 @@ class IndexPage extends React.Component {
 											src={icons.JCOL}
 										></img>
 									</div>
-
 									<div className="dlInfoWrapper">
 										<div className="gamePublicNotice">
 											<h4 className="publicNoticeText">
-												For Public Testing:
+												For Public
+												Testing:
 											</h4>
 											<img
-												src={icons.winlogo}
+												src={
+													icons.winlogo
+												}
 												alt=""
 												className="deviceLogoStyle"
 											/>
 											<img
-												src={icons.andlogo}
+												src={
+													icons.andlogo
+												}
 												alt=""
 												className="deviceLogoStyle"
 											/>
 										</div>
 										<div>
 											<Link to="/JuanChoiceOneLife">
-												<button className="downloadButton">Download</button>
+												<button className="downloadButton">
+													Download
+												</button>
+											</Link>
+										</div>
+									</div>
+								</div>
+								<div className="dlContainer">
+									<div className="dlImageWrapper">
+										<img
+											className="availableLogo2"
+											alt=""
+											src={icons.Mtos}
+										></img>
+									</div>
+									<div className="dlInfoWrapper">
+										<div className="gamePublicNotice">
+											<h4 className="publicNoticeText">
+												Closed Demo:
+											</h4>
+											<img
+												src={
+													icons.winlogo
+												}
+												alt=""
+												className="deviceLogoStyle"
+											/>
+											<div />
+										</div>
+										<div
+											style={{
+												marginRight: 80,
+											}}
+										>
+											<Link to="/Mithos">
+												<button className="downloadButton">
+													Download
+												</button>
 											</Link>
 										</div>
 									</div>
@@ -119,26 +168,60 @@ class IndexPage extends React.Component {
 					</div>
 				</Layout>
 				<div className="teamWrapper">
-					<ScrollAnimation animateIn="fadeIn" initiallyVisible={true} duration={3}>
+					<ScrollAnimation
+						animateIn="fadeIn"
+						initiallyVisible={true}
+						duration={3}
+					>
 						<div className="teamBackground">
 							<div className="teamProfile">
-								<img src={avatar.Albert} alt="Albert" className="profPic" />
-								<h4 className="nameText">Albert De leon Jr.</h4>
-								<p className="roleText">Team Leader/Developer</p>
+								<img
+									src={avatar.Albert}
+									alt="Albert"
+									className="profPic"
+								/>
+								<h4 className="nameText">
+									Albert De leon Jr.
+								</h4>
+								<p className="roleText">
+									Team Leader/Developer
+								</p>
 							</div>
 							<div className="teamProfile">
-								<img src={avatar.Kim} alt="" className="profPic" />
-								<h4 className="nameText">Kim Farley Arellano</h4>
-								<p className="roleText">Designer/Developer</p>
+								<img
+									src={avatar.Kim}
+									alt=""
+									className="profPic"
+								/>
+								<h4 className="nameText">
+									Kim Farley Arellano
+								</h4>
+								<p className="roleText">
+									Designer/Developer
+								</p>
 							</div>
 							<div className="teamProfile">
-								<img src={avatar.Justine} alt="" className="profPic" />
-								<h4 className="nameText">Justine Allen P. Manuel</h4>
-								<p className="roleText">Designer/Documenter</p>
+								<img
+									src={avatar.Justine}
+									alt=""
+									className="profPic"
+								/>
+								<h4 className="nameText">
+									Justine Allen P. Manuel
+								</h4>
+								<p className="roleText">
+									Designer/Documenter
+								</p>
 							</div>
 							<div className="teamProfile">
-								<img src={avatar.Lester} alt="" className="profPic" />
-								<h4 className="nameText">Mark Lester Hermano</h4>
+								<img
+									src={avatar.Lester}
+									alt=""
+									className="profPic"
+								/>
+								<h4 className="nameText">
+									Mark Lester Hermano
+								</h4>
 								<p className="roleText">Developer</p>
 							</div>
 						</div>
@@ -165,21 +248,51 @@ class IndexPage extends React.Component {
 								}}
 							>
 								<div className="contactContainer">
-									<img src={icons.facebook} alt="" className="contactIcons" />
-									<p style={{ marginLeft: 7 }}> Coming soon.</p>
+									<img
+										src={icons.facebook}
+										alt=""
+										className="contactIcons"
+									/>
+									<p style={{ marginLeft: 7 }}>
+										{" "}
+										Coming soon.
+									</p>
 								</div>
 								<div className="contactContainer">
-									<img src={icons.twitter} alt="" className="contactIcons" />
-									<p style={{ marginLeft: 7 }}>Coming soon.</p>
+									<img
+										src={icons.twitter}
+										alt=""
+										className="contactIcons"
+									/>
+									<p style={{ marginLeft: 7 }}>
+										Coming soon.
+									</p>
 								</div>
 							</div>
-							<div style={{ display: "flex", flex: 1, flexDirection: "column" }}>
+							<div
+								style={{
+									display: "flex",
+									flex: 1,
+									flexDirection: "column",
+								}}
+							>
 								<div className="contactContainer">
-									<img src={icons.phone} alt="" className="contactIcons" />
-									<p style={{ marginLeft: 7 }}> 0945-351-6391</p>
+									<img
+										src={icons.phone}
+										alt=""
+										className="contactIcons"
+									/>
+									<p style={{ marginLeft: 7 }}>
+										{" "}
+										0945-351-6391
+									</p>
 								</div>
 								<div className="contactContainer">
-									<img src={icons.gmail} alt="" className="contactIcons" />
+									<img
+										src={icons.gmail}
+										alt=""
+										className="contactIcons"
+									/>
 									<p style={{ marginLeft: 7 }}>
 										PixelHeartProductionGaming@gmail.com
 									</p>

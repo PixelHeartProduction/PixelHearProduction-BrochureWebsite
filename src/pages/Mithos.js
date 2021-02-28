@@ -22,15 +22,15 @@ const settings = {
 };
 
 const { icons } = CONSTANTS;
-const data = CONSTANTS.juanChoiceOneLife;
+const data = CONSTANTS.mithos;
 
-const JuanChoiceOneLife = () => (
+const Mithos = () => (
 	<Layout>
-		<SEO title="Juan Choice One Life" />
+		<SEO title="Mithos" />
 		<div style={{ flexDirection: "column", display: "flex" }}>
 			<br />
 			<div style={{ display: "flex" }}>
-				<h2 className="textHeader2">Juan Choice One Life</h2>
+				<h2 className="textHeader2">Mithos</h2>
 				<Link to="/">
 					<img
 						style={{ width: 40, height: 40 }}
@@ -43,18 +43,18 @@ const JuanChoiceOneLife = () => (
 			<div className="gameBox">
 				<div className="sliderContainer">
 					<Slider {...settings} autoplay fade arrows={true}>
-						<img src={data.images.pic1} alt="" />
-						<img src={data.images.pic2} alt="" />
-						<img src={data.images.pic3} alt="" />
-						<img src={data.images.pic4} alt="" />
+						<img src={data.images.mithos1} alt="" />
+						<img src={data.images.mithos2} alt="" />
+						<img src={data.images.mithos3} alt="" />
+						<img src={data.images.mithos4} alt="" />
 					</Slider>
 				</div>
-				<div className="availableLogo">
-					<img alt="" src={icons.JCOL}></img>
+				<div className="availableLogo3">
+					<img alt="" src={icons.Mtos}></img>
 					<div
 						style={{
 							marginTop: -35,
-							marginLeft: 50,
+							marginLeft: 90,
 							marginBottom: -30,
 						}}
 					>
@@ -62,11 +62,6 @@ const JuanChoiceOneLife = () => (
 							alt=""
 							style={{ width: 60, height: 60 }}
 							src={icons.winlogo}
-						/>
-						<img
-							alt=""
-							style={{ width: 60, height: 60 }}
-							src={icons.andlogo}
 						/>
 					</div>
 					<p>
@@ -91,16 +86,7 @@ const JuanChoiceOneLife = () => (
 			<br />
 			<div style={{ display: "flex", justifyContent: "space-around" }}>
 				<div className="linkButtons">
-					<a href="https://drive.google.com/open?id=1smED5V1cVofpJXkO_jtUWHo1tmYeW2w2">
-						<img
-							alt=""
-							className="downloadButtons"
-							src={btnand}
-						></img>
-					</a>
-				</div>
-				<div className="linkButtons">
-					<a href="https://drive.google.com/open?id=1PLFtiPlOqEDGLQPcS39DuwIbhRv1vvbG">
+					<a href="https://drive.google.com/file/d/1mgWGvum5ge85wuHhPFlwIVN33clb5tnX/view?fbclid=IwAR1XIWIDizWnnG_Iyj8XdQ75FnUZRjIIPwSOOk9Y0BSInlBwo2hWUZ801XM">
 						<img
 							alt=""
 							className="downloadButtons1"
@@ -115,12 +101,8 @@ const JuanChoiceOneLife = () => (
 			<p>1) Download the game from google drive</p>
 			<p>2) Extract all the zip file to a new folder</p>
 			<p>3) Enjoy</p>
-			<h5>Installation for Android:</h5>
-			<p>1) Download the apk from google drive</p>
-			<p>2) Install</p>
-			<p>3) Enjoy</p>
 		</div>
 	</Layout>
 );
 
-export default JuanChoiceOneLife;
+export default Mithos;
