@@ -3,6 +3,7 @@ import winlogo from "./src/images/windowsicon.png";
 import andlogo from "./src/images/androidIcon.png";
 import JCOL from "./src/images/JuanCHoiceLogo.png";
 import Mtos from "./src/images/MithosLogo.png";
+import Nene from "./src/images/Nene_icon.png";
 import Albert from "./src/images/Albert.png";
 import Kim from "./src/images/Kim.png";
 import Justine from "./src/images/Justine.png";
@@ -19,13 +20,17 @@ import mithos1 from "./src/images/MithosGallery/MithosSS1.png";
 import mithos2 from "./src/images/MithosGallery/MithosSS2.png";
 import mithos3 from "./src/images/MithosGallery/MithosSS3.png";
 import mithos4 from "./src/images/MithosGallery/MithosSS4.png";
+import nene1 from "./src/images/NeneGallery/nene2.png";
+import nene2 from "./src/images/NeneGallery/nene3.png";
+import nene3 from "./src/images/NeneGallery/nene4.png";
+import nene4 from "./src/images/NeneGallery/nene5.png";
 
 const Constant = {
 	avatar: {
 		Albert,
 		Kim,
 		Justine,
-		Lester,
+		Lester
 	},
 	icons: {
 		phone,
@@ -34,9 +39,10 @@ const Constant = {
 		facebook,
 		Mtos,
 		JCOL,
+		Nene,
 		andlogo,
 		winlogo,
-		heartIcon,
+		heartIcon
 	},
 	mithos: {
 		desc: `A semi-open world fantasy Filipino 2D ARPG featuring a vast world of pre-colonial Philippines
@@ -51,8 +57,8 @@ const Constant = {
 			mithos1,
 			mithos2,
 			mithos3,
-			mithos4,
-		},
+			mithos4
+		}
 	},
 	juanChoiceOneLife: {
 		desc: `A simulation game that will present the different ways each scenario
@@ -70,8 +76,23 @@ const Constant = {
 			pic1,
 			pic2,
 			pic3,
-			pic4,
-		},
+			pic4
+		}
 	},
+	Neneshooting: {
+		desc: `A 10 day platformer challenge made from scratch game.`,
+		version: "Alpha 1.0",
+		date: "Sept, 2021",
+
+		devices: "Windows 7+",
+		genre: "Platformer, Minecraft",
+
+		images: {
+			nene1,
+			nene2,
+			nene3,
+			nene4
+		}
+	}
 };
 export default Constant;

@@ -22,8 +22,8 @@ const url = "https://brochure-api-service.herokuapp.com/api/v1/visitor/visit";
 let axiosConfig = {
 	headers: {
 		"Content-Type": "application/json",
-		"Access-Control-Allow-Origin": "*",
-	},
+		"Access-Control-Allow-Origin": "*"
+	}
 };
 class IndexPage extends React.Component {
 	componentDidMount() {
@@ -35,7 +35,7 @@ class IndexPage extends React.Component {
 		const body = {
 			dateTime: Moment()
 				.format("YYYY-M-D HH:mm")
-				.toString(),
+				.toString()
 		};
 		Axios.post(proxyurl + url, body, axiosConfig).then(res => this.storeData(res.data));
 	};
@@ -150,10 +150,45 @@ class IndexPage extends React.Component {
 										</div>
 										<div
 											style={{
-												marginRight: 80,
+												marginRight: 80
 											}}
 										>
 											<Link to="/Mithos">
+												<button className="downloadButton">
+													Download
+												</button>
+											</Link>
+										</div>
+									</div>
+								</div>
+								<div className="dlContainer">
+									<div className="dlImageWrapper">
+										<img
+											className="availableLogo2"
+											alt=""
+											src={icons.Nene}
+										></img>
+									</div>
+									<div className="dlInfoWrapper">
+										<div className="gamePublicNotice">
+											<h4 className="publicNoticeText">
+												Closed Demo:
+											</h4>
+											<img
+												src={
+													icons.winlogo
+												}
+												alt=""
+												className="deviceLogoStyle"
+											/>
+											<div />
+										</div>
+										<div
+											style={{
+												marginRight: 80
+											}}
+										>
+											<Link to="/NeneShootingGame">
 												<button className="downloadButton">
 													Download
 												</button>
@@ -237,14 +272,14 @@ class IndexPage extends React.Component {
 								display: "flex",
 								flexDirection: "row",
 								justifyContent: "space-between",
-								flexWrap: "wrap",
+								flexWrap: "wrap"
 							}}
 						>
 							<div
 								style={{
 									display: "flex",
 									flex: 1,
-									flexDirection: "column",
+									flexDirection: "column"
 								}}
 							>
 								<div className="contactContainer">
@@ -273,7 +308,7 @@ class IndexPage extends React.Component {
 								style={{
 									display: "flex",
 									flex: 1,
-									flexDirection: "column",
+									flexDirection: "column"
 								}}
 							>
 								<div className="contactContainer">
